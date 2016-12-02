@@ -1,0 +1,137 @@
+{
+  "companyId": "TTIC",
+  "state": "FL",
+  "product": "HO3",
+
+  // Coverage Limits
+  "coverageLimits": {
+    "dwelling": {
+      "displayName": "Dwelling",
+      "letterDesignation": "A",
+      "format": "Currency",
+      "restriction": "Range",
+      "range": {
+        "format": "Currency",
+        "minAmount": 125000,
+        "maxAmount": 2000000
+      }
+    },
+    "otherStructures": {
+      "displayName": "Other Structures",
+      "letterDesignation": "B",
+      "format": "Currency",
+      "restriction": "Range",
+      "range": {
+        "format": "Percentage",
+        "refCoverageLimit": "dwelling",
+        "minAmount": 0,
+        "maxAmount": 10
+      }
+    },
+    "personalProperty": {
+      "displayName": "Personal Property",
+      "letterDesignation": "C",
+      "format": "Currency",
+      "restriction": "Range",
+      "range": {
+        "format": "Percentage",
+        "refCoverageLimitKey": "dwelling",
+        "minAmount": 0,
+        "maxAmount": 50
+      }
+    },
+    "lossOfUse": {
+      "displayName": "Loss of Use",
+      "letterDesignation": "D",
+      "format": "Currency",
+      "restriction": "Range",
+      "range": {
+        "format": "Percentage",
+        "refCoverageLimitKey": "dwelling",
+        "minAmount": 0,
+        "maxAmount": 10
+      }
+    },
+    "personalLiability": {
+      "displayName": "Personal Liability",
+      "letterDesignation": "E",
+      "format": "Currency",
+      "restriction": "Choice",
+      "choices": [100000, 300000]
+    },
+    "medicalPayments": {
+      "displayName": "Medical Payments",
+      "letterDesignation": "F",
+      "format": "Currency",
+      "restriction": "Range",
+      "range": {
+        "format": "Percentage",
+        "refCoverageLimitKey": "dwelling",
+        "minAmount": 0,
+        "maxAmount": 10
+      }
+    },
+    "moldProperty": {
+      "displayName": "Mold Property",
+      "letterDesignation": null,
+      "format": "Currency",
+      "restriction": "Choice",
+      "choices": [10000, 25000, 50000]
+    },
+    "moldLiability": {
+      "displayName": "Mold Liability",
+      "letterDesignation": null,
+      "format": "Currency",
+      "restriction": "Choice",
+      "choices": [50000, 100000]
+    },
+    "ordinanceOrLaw": {
+      "displayName": "Ordinance or Law",
+      "letterDesignation": null,
+      "format": "Percentage",
+      "refCoverageLimitKey": "dwelling",
+      "restriction": "Choice",
+      "choices": [25, 50]
+    }
+  },
+
+  // Coverage Options
+  "coverageOptions": {
+    "personalPropertyRPC": {
+      "displayName": "Personal Property Replacement Cost",
+      "choices": ["Yes", "No"]
+    },
+    "incidentalOccupancyDwelling": {
+      "displayName": "Permitted Incidental Occupancies for Dwelling",
+      "choices": ["Yes", "No"]
+    },
+    "incidentalOccupancyOtherStructures": {
+      "displayName": "Permitted Incidental Occupancies for Other Structures",
+      "choices": ["Yes", "No"]
+    },
+    "sinkholePerilCoverage": {
+      "displayName": "Sinkhole Peril Coverage",
+      "choices": ["Yes", "No"]
+    }
+  },
+
+  // Deductibles
+  "deductibles": {
+    "hurricane": {
+      "displayName": "Hurricane",
+      "format": "Currency",
+      "choices": [500, 1000]
+    },
+    "sinkhole": {
+      "displayName": "Sinkhole",
+      "format": "Percentage",
+      "refCoverageLimitKey": "dwelling",
+      "choices": [10]
+    },
+    "allOtherPerils": {
+      "displayName": "All Other Perils",
+      "format": "Currency",
+      "choices": [2000, 5000]
+    }
+  }
+}
